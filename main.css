@@ -1,0 +1,17 @@
+.grey {
+    background: grey;
+}
+.yellow {
+    background: yellow;
+}
+.pink {
+    background: pink;
+}
+.blue {
+    background: blue;
+}
+.divider {
+    height: 18;
+    border: 2px double rgb(41, 32, 94);
+    text-align: center;
+}
