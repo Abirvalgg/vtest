@@ -12,31 +12,58 @@
     <script src="https://unpkg.com/vue"></script>
     
 
-    <div id="app">
-        <div class="divider">Прим 1</div>
-        <div @mouseover=changeText>Text btn</div>
+    <div id="app" class="wrapper">
+        <div class="one">
+        <span @mouseover=changeText>Text btn</span>
         <p>{{ title }}</p>
         <p :class="styleCSS"> Цвет: {{ styleCSS }}</p>
         <input  type="text" placeholder="pink,yellow,blue,grey" @input="styleCSS = $event.target.value"><br />
+        </div>
 
-        <div class="divider">Прим 2</div>
+        <div class="two">
         <input  type="text" placeholder="input number" @input="increment ($event.target.value) ">
         <p>{{value}}</p>
         <p>{{doubleValue}}</p>
         <p>{{stagedValue}}</p>
+        </div>
 
-        <div class="divider">Прим 3</div>
+        <div class="three">
         <button @click="show=!show">Чеширская магия?</button>
         <p v-if="show">Текст который может исчезнуть</p>
         <p v-else="show">А может не исчезать</p>
+        
         <ul>
-            <li v-for= "(car, i) in cars" > {{i+1}} - {{car.model}}, {{car.speed}} </li>
+            <li v-for= "(car, i) in cars" >
+                {{i+1}} - {{car.model}}, {{car.speed}} 
+            </li>
         </ul>
-    </div>
+        </div>
 
+        <div class="four">
+        <button @click="show=!show">Чеширская магия?</button>
+        <p v-if="show">Текст который может исчезнуть</p>
+        <p v-else>{{showMess}}</p>
+        <p>{{ message | lowercase }} </p>
+        
+        <ul>
+            <li v-for= "(car, i) in cars" >
+                {{i+1}} - {{car.model}}, {{car.speed}} 
+            </li>
+        </ul>
+        </div>
+        <div class="five">
+           <comp-car></comp-car>
+        </div>
+        <div class="six">
+           <comp-car></comp-car>
+        </div>
+        
+    </div>
 
     
 
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
+
+

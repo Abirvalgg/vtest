@@ -1,5 +1,8 @@
+:root {
+    --maincolor: yellow;
+}
 .grey {
-    background: grey;
+    background: var(--maincolor);
 }
 .yellow {
     background: yellow;
@@ -14,4 +17,43 @@
     height: 18;
     border: 2px double rgb(41, 32, 94);
     text-align: center;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100, auto);
+}
+.one {
+    grid-column: 1;
+    grid-row: 1;
+    border: 2px double rgb(41, 32, 94);
+}
+.two { 
+    grid-column: 2;
+    grid-row: 1;
+    border: 2px double rgb(41, 32, 94);
+}
+.three {
+    grid-column: 3;
+    grid-row: 1;
+    border: 2px double rgb(41, 32, 94);
+}
+.four {
+    grid-column: 1;
+    grid-row: 2;
+    border: 2px double rgb(41, 32, 94);
+}
+.five {
+    grid-column: 2;
+    grid-row: 2;
+    border: 2px double rgb(41, 32, 94);
+}
+.six {
+    grid-column: 3;
+    grid-row: 2;
+    border: 2px double rgb(41, 32, 94);
+}
+.cars2 {
+    border: 1px double rgb(41, 32, 94);
 }
